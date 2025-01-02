@@ -4,6 +4,9 @@
  * (ignoring spaces, punctuation, and capitalization).
  */
 
+
+package org.coding.companion.palindrome;
+
 public class Palindrome {
 
     // Method to check if a string is a palindrome
