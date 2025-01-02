@@ -7,6 +7,9 @@
 
 package org.coding.companion.palindrome;
 
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
 public class Palindrome {
 
     // Method to check if a string is a palindrome
@@ -33,16 +36,12 @@ public class Palindrome {
         return true; // It's a palindrome
     }
 
-    public static void main(String[] args) {
-        // Test cases
-        String test1 = "A man, a plan, a canal: Panama";
-        String test2 = "racecar";
-        String test3 = "hello";
-        String test4 = null;
 
-        System.out.println("\"" + test1 + "\" is a palindrome: " + isPalindrome(test1));
-        System.out.println("\"" + test2 + "\" is a palindrome: " + isPalindrome(test2));
-        System.out.println("\"" + test3 + "\" is a palindrome: " + isPalindrome(test3));
-        System.out.println("null string is a palindrome: " + isPalindrome(test4));
+    @Test
+    public void testPalindrome(){
+        Assertions.assertTrue(isPalindrome("A man, a plan, a canal: Panama"));
+        Assertions.assertTrue(isPalindrome("racecar"));
+        Assertions.assertFalse(isPalindrome("hello"));
+        Assertions.assertFalse(isPalindrome(null));
     }
 }
